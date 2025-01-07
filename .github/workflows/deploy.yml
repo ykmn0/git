@@ -17,6 +17,8 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Deploy to server
-      run: |
-        ssh -o StrictHostKeyChecking=no deploy@84.201.179.236 'bash -s' < deploy.sh
+    - name: Make deploy.sh executable
+      run: chmod +x ./scripts/deploy.sh
+
+    - name: Run deploy script
+      run: ./scripts/deploy.sh
