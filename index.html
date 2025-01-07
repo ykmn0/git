@@ -1,11 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Git Basic Course - Learn the most essential Git commands">
+    <meta name="keywords" content="Git, Git commands, Git tutorial">
+    <title>Git Basic Course</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 20px;
+            margin: 0;
+            font-size: 2em;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        li {
+            background-color: #fafafa;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        li:hover {
+            background-color: #f1f1f1;
+            transform: scale(1.02);
+        }
+        li h2 {
+            font-size: 1.1em;
+            color: #4CAF50;
+            margin-bottom: 8px;
+        }
+        li p {
+            font-size: 0.95em;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        /* Темная тема */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        body.dark-mode h1 {
+            background-color: #2C6B2F;
+        }
+        body.dark-mode li {
+            background-color: #333;
+            color: #e0e0e0;
+        }
+        body.dark-mode li:hover {
+            background-color: #444;
+        }
+        body.dark-mode li h2 {
+            color: #4CAF50;
+        }
+        body.dark-mode li p {
+            color: #ddd;
+        }
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .theme-toggle:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-<p>Test</p>
+    <button class="theme-toggle">Switch Theme</button>
+    <h1>Git Basic Course</h1>
+    <div class="container">
+        <ul>
+            <li>
+                <h2><i class="fas fa-play-circle"></i> git init</h2>
+                <p>Создает новый репозиторий в текущей директории.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-code-branch"></i> git clone [url]</h2>
+                <p>Создает копию удаленного репозитория на локальной машине.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-info-circle"></i> git status</h2>
+                <p>Показывает текущее состояние рабочего каталога и индекса.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-plus-circle"></i> git add [file]</h2>
+                <p>Добавляет файл в индекс для последующего коммита.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-pencil-alt"></i> git commit -m "[message]"</h2>
+                <p>Сохраняет изменения в локальном репозитории с комментарием.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-arrow-up"></i> git push</h2>
+                <p>Отправляет локальные изменения в удаленный репозиторий.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-arrow-down"></i> git pull</h2>
+                <p>Загружает изменения из удаленного репозитория и сливает их с локальными.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-code-branch"></i> git branch</h2>
+                <p>Показывает список веток в репозитории.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-exchange-alt"></i> git checkout [branch]</h2>
+                <p>Переключает на указанную ветку.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-share-alt"></i> git merge [branch]</h2>
+                <p>Сливает изменения из одной ветки в текущую.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-history"></i> git log</h2>
+                <p>Показывает историю коммитов.</p>
+            </li>
+            <li>
+                <h2><i class="fas fa-random"></i> git remote add origin [url]</h2>
+                <p>Добавляет удаленный репозиторий для синхронизации.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>Git Basic Course - Lesson 5</p>
+    </div>
+    <script>
+        const themeToggleBtn = document.querySelector('.theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
