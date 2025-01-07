@@ -1,19 +1,19 @@
 #!/bin/bash
 
-SERVER_USER="ykmnx"
-SERVER_IP="gitbasic.telran-edu.ru"
+REMOTE_USER="ykmnx"
+REMOTE_HOST="gitbasic.telran-edu.ru"
+REMOTE_PATH="/var/www/html"
 
-DEPLOY_DIR="/var/www/html"
-GIT_REPO_DIR="/tmp/repo"
+LOCAL_PATH="/tmp/repo"
 
 rm -rf $GIT_REPO_DIR
 
 git clone https://github.com/ykmn0/git.git $GIT_REPO_DIR
 
-cp $GIT_REPO_DIR/index.html $DEPLOY_DIR/
+rsync -avz $LOCAL_PATH/index.html $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/
 
 echo "Restart Nginx"
-ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP 'systemctl reload nginx'
+ssh $REMOTE_USER@$REMOTE_HOST "sudo systemctl restart nginx"
 
 rm -rf $GIT_REPO_DIR
 
