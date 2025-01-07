@@ -13,7 +13,7 @@ ssh-keyscan -H $REMOTE_HOST >> ~/.ssh/known_hosts
 
 git clone https://github.com/ykmn0/git.git $LOCAL_PATH
 
-rsync -avz $LOCAL_PATH/index.html $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/
+sudo rsync -avz $LOCAL_PATH/index.html $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/
 
 echo "Restart Nginx"
 ssh $REMOTE_USER@$REMOTE_HOST "sudo systemctl restart nginx"
