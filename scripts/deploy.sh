@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SERVER_USER="www-data"
-SERVER_IP="84.201.179.236"
+SERVER_IP="gitbasic.telran-edu.ru"
 
 DEPLOY_DIR="/var/www/html"
 GIT_REPO_DIR="/tmp/repo"
