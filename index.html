@@ -6,86 +6,119 @@
     <title>Git Basic Course</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
         h1 {
             text-align: center;
-            color: #333;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         ul {
             list-style-type: none;
             padding-left: 0;
         }
         li {
-            background-color: #fff;
+            background-color: #fafafa;
             margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-left: 5px solid #4CAF50;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         li h2 {
-            margin: 0;
-            font-size: 1.2em;
+            font-size: 1.1em;
+            color: #4CAF50;
+            margin-bottom: 8px;
         }
         li p {
-            margin: 5px 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
     <h1>Git Basic Course</h1>
-    <ul>
-        <li>
-            <h2>git init</h2>
-            <p>Создает новый репозиторий в текущей директории.</p>
-        </li>
-        <li>
-            <h2>git clone [url]</h2>
-            <p>Создает копию удаленного репозитория на локальной машине.</p>
-        </li>
-        <li>
-            <h2>git status</h2>
-            <p>Показывает текущее состояние рабочего каталога и индекса.</p>
-        </li>
-        <li>
-            <h2>git add [file]</h2>
-            <p>Добавляет файл в индекс для последующего коммита.</p>
-        </li>
-        <li>
-            <h2>git commit -m "[message]"</h2>
-            <p>Сохраняет изменения в локальном репозитории с комментарием.</p>
-        </li>
-        <li>
-            <h2>git push</h2>
-            <p>Отправляет локальные изменения в удаленный репозиторий.</p>
-        </li>
-        <li>
-            <h2>git pull</h2>
-            <p>Загружает изменения из удаленного репозитория и сливает их с локальными.</p>
-        </li>
-        <li>
-            <h2>git branch</h2>
-            <p>Показывает список веток в репозитории.</p>
-        </li>
-        <li>
-            <h2>git checkout [branch]</h2>
-            <p>Переключает на указанную ветку.</p>
-        </li>
-        <li>
-            <h2>git merge [branch]</h2>
-            <p>Сливает изменения из одной ветки в текущую.</p>
-        </li>
-        <li>
-            <h2>git log</h2>
-            <p>Показывает историю коммитов.</p>
-        </li>
-        <li>
-            <h2>git remote add origin [url]</h2>
-            <p>Добавляет удаленный репозиторий для синхронизации.</p>
-        </li>
-    </ul>
+    <div class="container">
+        <ul>
+            <li>
+                <h2>git init</h2>
+                <p>Создает новый репозиторий в текущей директории.</p>
+            </li>
+            <li>
+                <h2>git clone [url]</h2>
+                <p>Создает копию удаленного репозитория на локальной машине.</p>
+            </li>
+            <li>
+                <h2>git status</h2>
+                <p>Показывает текущее состояние рабочего каталога и индекса.</p>
+            </li>
+            <li>
+                <h2>git add [file]</h2>
+                <p>Добавляет файл в индекс для последующего коммита.</p>
+            </li>
+            <li>
+                <h2>git commit -m "[message]"</h2>
+                <p>Сохраняет изменения в локальном репозитории с комментарием.</p>
+            </li>
+            <li>
+                <h2>git push</h2>
+                <p>Отправляет локальные изменения в удаленный репозиторий.</p>
+            </li>
+            <li>
+                <h2>git pull</h2>
+                <p>Загружает изменения из удаленного репозитория и сливает их с локальными.</p>
+            </li>
+            <li>
+                <h2>git branch</h2>
+                <p>Показывает список веток в репозитории.</p>
+            </li>
+            <li>
+                <h2>git checkout [branch]</h2>
+                <p>Переключает на указанную ветку.</p>
+            </li>
+            <li>
+                <h2>git merge [branch]</h2>
+                <p>Сливает изменения из одной ветки в текущую.</p>
+            </li>
+            <li>
+                <h2>git log</h2>
+                <p>Показывает историю коммитов.</p>
+            </li>
+            <li>
+                <h2>git remote add origin [url]</h2>
+                <p>Добавляет удаленный репозиторий для синхронизации.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p>Created by <a href="https://github.com">Your Name</a></p>
+    </div>
 </body>
 </html>
