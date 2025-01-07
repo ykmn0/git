@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SERVER_USER="deploy"
+SERVER_USER="www-data"
 SERVER_IP="84.201.179.236"
 
 DEPLOY_DIR="/var/www/html"
