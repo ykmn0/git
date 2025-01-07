@@ -1,20 +1,23 @@
 #!/bin/bash
 
-SERVER_USER="www-data"
-SERVER_IP="84.201.179.236"
+REMOTE_USER="ykmnx"
+REMOTE_HOST="gitbasic.telran-edu.ru"
+REMOTE_PATH="/var/www/html"
 
-DEPLOY_DIR="/var/www/html"
-GIT_REPO_DIR="/tmp/repo"
+LOCAL_PATH="/tmp/repo"
 
-rm -rf $GIT_REPO_DIR
+rm -rf $LOCAL_PATH
 
-git clone https://github.com/ykmn0/git.git $GIT_REPO_DIR
+mkdir -p ~/.ssh
+ssh-keyscan -H $REMOTE_HOST >> ~/.ssh/known_hosts
 
-rsync -avz --exclude '.git' $GIT_REPO_DIR/ $DEPLOY_DIR/
+git clone https://github.com/ykmn0/git.git $LOCAL_PATH
+
+rsync -avz $LOCAL_PATH/index.html $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/
 
 echo "Restart Nginx"
-ssh -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP 'systemctl reload nginx'
+ssh $REMOTE_USER@$REMOTE_HOST "sudo systemctl restart nginx"
 
-rm -rf $GIT_REPO_DIR
+rm -rf $LOCAL_PATH
 
 echo "Deploy finished"
