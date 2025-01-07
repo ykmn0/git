@@ -8,6 +8,9 @@ LOCAL_PATH="/tmp/repo"
 
 rm -rf $LOCAL_PATH
 
+mkdir -p ~/.ssh
+ssh-keyscan -H $REMOTE_HOST >> ~/.ssh/known_hosts
+
 git clone https://github.com/ykmn0/git.git $LOCAL_PATH
 
 rsync -avz $LOCAL_PATH/index.html $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH/
