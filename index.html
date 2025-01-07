@@ -1,24 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-<title>Welcome to Git Basic Server</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Basic Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        li {
+            background-color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        li h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        li p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to Git Basic Server</h1>
-
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
+    <h1>Git Basic Course</h1>
+    <ul>
+        <li>
+            <h2>git init</h2>
+            <p>Создает новый репозиторий в текущей директории.</p>
+        </li>
+        <li>
+            <h2>git clone [url]</h2>
+            <p>Создает копию удаленного репозитория на локальной машине.</p>
+        </li>
+        <li>
+            <h2>git status</h2>
+            <p>Показывает текущее состояние рабочего каталога и индекса.</p>
+        </li>
+        <li>
+            <h2>git add [file]</h2>
+            <p>Добавляет файл в индекс для последующего коммита.</p>
+        </li>
+        <li>
+            <h2>git commit -m "[message]"</h2>
+            <p>Сохраняет изменения в локальном репозитории с комментарием.</p>
+        </li>
+        <li>
+            <h2>git push</h2>
+            <p>Отправляет локальные изменения в удаленный репозиторий.</p>
+        </li>
+        <li>
+            <h2>git pull</h2>
+            <p>Загружает изменения из удаленного репозитория и сливает их с локальными.</p>
+        </li>
+        <li>
+            <h2>git branch</h2>
+            <p>Показывает список веток в репозитории.</p>
+        </li>
+        <li>
+            <h2>git checkout [branch]</h2>
+            <p>Переключает на указанную ветку.</p>
+        </li>
+        <li>
+            <h2>git merge [branch]</h2>
+            <p>Сливает изменения из одной ветки в текущую.</p>
+        </li>
+        <li>
+            <h2>git log</h2>
+            <p>Показывает историю коммитов.</p>
+        </li>
+        <li>
+            <h2>git remote add origin [url]</h2>
+            <p>Добавляет удаленный репозиторий для синхронизации.</p>
+        </li>
+    </ul>
 </body>
 </html>
