@@ -15,7 +15,7 @@
             color: #333;
             margin: 0;
             padding: 0;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         h1 {
             text-align: center;
@@ -85,10 +85,16 @@
         }
         body.dark-mode li {
             background-color: #333;
-            color: #fff;
+            color: #e0e0e0;
         }
         body.dark-mode li:hover {
             background-color: #444;
+        }
+        body.dark-mode li h2 {
+            color: #4CAF50;
+        }
+        body.dark-mode li p {
+            color: #ddd;
         }
         .theme-toggle {
             position: fixed;
@@ -164,7 +170,7 @@
         </ul>
     </div>
     <div class="footer">
-        <p>Git Basic Course - Lesson 5</p>
+        <p>Created by <a href="https://github.com">Your Name</a></p>
     </div>
     <script>
         const themeToggleBtn = document.querySelector('.theme-toggle');
@@ -174,3 +180,4 @@
     </script>
 </body>
 </html>
+
